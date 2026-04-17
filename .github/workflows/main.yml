@@ -2,21 +2,18 @@ name: First Workflow
 
 on:
     schedule:
-        - cron: "26 12 * * *" # every day at midnight 12:20 Pm
-          timezone: "Asia/Dhaka"
+        branches: [ main ]
 
 jobs:
-    run-cron:
+    build:
         runs-on: ubuntu-latest
 
         steps:
-            # checkout the code
             - uses: actions/checkout@v2
             - name: Run a one-line script
               run: echo Hello, world!
             # start npm run test then dev
             - name: npm run test
               run: npm run test
-            #   run npm run dev after test
             - name: npm run dev
               run: npm run dev
