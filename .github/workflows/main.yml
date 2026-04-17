@@ -2,7 +2,8 @@ name: First Workflow
 
 on:
     schedule:
-        - cron: "20 12 * * *" # every day at midnight 12:20 Pm
+        - cron: "26 12 * * *" # every day at midnight 12:20 Pm
+          timezone: "Asia/Dhaka"
 
 jobs:
     run-cron:
